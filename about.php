@@ -1,5 +1,6 @@
 <?php
 
+$image_generator = rand(1, 2);
 $story_generator = rand(1, 3);
 
 switch ($story_generator) {
@@ -30,21 +31,24 @@ switch ($story_generator) {
     <link rel="stylesheet" href="./css/style.css">
     <title>About</title>
 </head>
-<body class="page">
+<body class="page  page__image-<?php print $image_generator; ?>">
     <header class="header">
         <nav class="nav">
+            <div class="nav__logo">
+                <img class="nav__img" src="./images/egg.png" alt="golden egg">
+            </div>
             <ul class="nav__list">
                 <li class="nav__item">
-                    <a href="./" class="nav__link">dfgfdg</a>
+                    <a href="./index.php" class="nav__link">Home</a>
                 </li>
                 <li class="nav__item">
-                    <a href="./" class="nav__link">dfgfdg</a>
+                    <a href="./kiausrakulas.php" class="nav__link">Kiaušrakulas</a>
                 </li>
                 <li class="nav__item">
-                    <a href="./" class="nav__link">dfgfdg</a>
+                    <a href="./about.php" class="nav__link">About</a>
                 </li>
                 <li class="nav__item">
-                    <a href="./" class="nav__link">dfgfdg</a>
+                    <a href="./contact.php" class="nav__link">Contact</a>
                 </li>
             </ul>
         </nav>
@@ -55,7 +59,7 @@ switch ($story_generator) {
         </article>
     </header>
 
-    <main class="main">
+    <main>
         <article class="story">
             <h2 class="story__title"><?php print $headline; ?></h2>
             <p class="story__body"><?php print $story; ?></p>

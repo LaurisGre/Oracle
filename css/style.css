@@ -52,7 +52,7 @@ img {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 5rem;
+    /*padding: 5rem;*/
     min-height: 100vh;
     width: 100%;
     background-repeat: no-repeat;
@@ -81,19 +81,44 @@ img {
 }
 
 .nav {
+    position: fixed;
+    background-color: rgba(0,0,0,0.6);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
 
+.nav__img {
+    width: 8rem;
+    height: auto;
+    margin-left: 7rem;
+    padding-top: 1rem;
+}
+
+.nav__logo {
+    cursor: pointer;
 }
 
 .nav__list {
-
+    display: flex;
+    height: 7rem;
+    align-items: center;
 }
 
 .nav__item {
-
+    margin-right: 1.5rem;
+    font-size: 2rem;
+    color: #fff;
+    transition: color 0.4s;
 }
 
-.nav__link {
+.nav__item:last-child {
+    margin-right: 7rem;
+}
 
+.nav__item:hover {
+    color: grey;
+    transition: color 0.4s;
 }
 
 
@@ -105,14 +130,16 @@ img {
 \*------------------------------------*/
 
 .hero {
-    margin-top: 4rem;
+    padding: 35rem 9rem 0;
 }
 
 .hero__heading {
+    font-size: 2.4rem;
     font-weight: 600;
 }
 
 .hero__subheading {
+    font-size: 1.6rem;
     font-weight: 400;
 }
 
@@ -125,21 +152,132 @@ img {
 \*------------------------------------*/
 
 .main {
+    background-image: url("https://images.unsplash.com/photo-1518790104582-412c1e2cf36f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1189&q=80");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
+.main__header {
+    color: #fff;
+    font-size: 4rem;
+}
+
+.main__paragraph {
+    color: #fff;
+    font-size: 2.5rem;
+}
+
+.main--kiausrakulas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
 }
 
 .story {
-
+    padding: 9rem;
 }
 
 .story__title {
     margin-bottom: 1rem;
-    font-size: 1.4rem;
+    font-size: 1.8rem;
     font-weight: 300;
 }
 
 .story__body {
-    font-size: 1.8rem;
+    font-size: 2.2rem;
     line-height: 1.4;
-    font-weight: 300;
+    font-weight: 400;
+}
+
+
+
+
+
+/*------------------------------------*\
+  #Ball section
+\*------------------------------------*/
+
+.ball {
+    height: 55rem;
+    width: 50rem;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.ball__image {
+    height: 100%;
+    width: 100%;
+    background-image: url('https://spaces.profoundjs.com/ide/bernice/magic-8-ball-app/public/8-Ball.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    position: relative;
+}
+
+.ball__result {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+
+
+
+
+/*------------------------------------*\
+  #Contact section
+\*------------------------------------*/
+
+.contact {
+    background-color: rgba(191, 191, 191, 0.5);
+    border-radius: 3rem;
+    padding: 9rem;
+    box-shadow: 0rem 0rem 3rem 3rem rgba(191, 191, 191, 0.5);
+}
+
+.contact__title {
+    margin-bottom: 2rem;
+    font-size: 2.2rem;
+}
+
+.contact__list {
+    line-height: 1.8;
+}
+
+.contact__item {
+    font-size: 1.8rem;
+}
+
+.foreground {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.background-1{
+    background-image: url('https://cdna.artstation.com/p/assets/images/images/009/019/618/large/amelia-gagne-fortune-teller.jpg?1516674062');
+}
+
+.background-2{
+    background-image: url('https://cdna.artstation.com/p/assets/images/images/005/746/576/large/martin-eisel-ende-fortune-room.jpg?1493472235');
+}
+
+.background-3{
+    background-image: url('https://steamuserimages-a.akamaihd.net/ugc/940558231926880229/F47020874646FCD79B676B5E0B2A9DD417DDEE07/?imw=637&imh=358&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true');
 }
