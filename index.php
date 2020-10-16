@@ -1,28 +1,23 @@
 <?php
+$team_name = 'Kabanatys Kiaušai';
+$random_name = rand(1,4);
 
-$rand_num_ball = rand(1, 5);
-
-switch ($rand_num_ball) {
+switch($random_name) {
     case 1:
-        $result = 'Tikrai taip';
+        $member_name = 'Deividas';
         break;
     case 2:
-        $result = 'Taip';
+        $member_name = 'Mindaugas';
         break;
     case 3:
-        $result = 'Gal';
+        $member_name = 'Lukas';
         break;
     case 4:
-        $result = 'Ne';
-        break;
-    case 5:
-        $result = 'NICHUJA';
+        $member_name = 'Laurynas';
         break;
 }
-
 ?>
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -30,9 +25,9 @@ switch ($rand_num_ball) {
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="./css/style.css">
-    <title>Kiaušrakulas</title>
+    <title>Home</title>
 </head>
-<body class="page  page__image-1">
+<body>
     <header>
         <nav class="nav">
             <div class="nav__logo">
@@ -54,12 +49,10 @@ switch ($rand_num_ball) {
             </ul>
         </nav>
     </header>
-
-    <main class="main--kiausrakulas">
-        <section class="ball">
-            <div class="ball__image">
-                <span class="ball__result"><?php print $result; ?></span>
-            </div>
+    <main>
+        <section class="main">
+            <h1 class="main__header">Our Team-Name is <?php print $team_name ?> </h1>
+            <p class="main__paragraph">At the moment available is kiaušrakulas: <?php print $member_name ?></p>
         </section>
     </main>
 </body>
